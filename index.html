@@ -1,9 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robo Judge</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Hello, world! My website is live.</h1>
+  <div class="scene">
+    <div class="star star-1"></div>
+    <div class="star star-2"></div>
+    <div class="star star-3"></div>
+    <div class="star star-4"></div>
+
+    <div class="hud">
+      <div class="hud-card">
+        <span class="hud-label">Bug score</span>
+        <strong id="scoreValue">0</strong>
+      </div>
+      <div class="hud-card">
+        <span class="hud-label">Mood</span>
+        <strong id="moodValue">Neutral</strong>
+      </div>
+    </div>
+
+    <div class="bug" id="bug" aria-label="Bug" role="button" tabindex="0"></div>
+
+    <div class="robot-wrap">
+      <div class="robot mood-neutral" id="robot">
+        <div class="antenna"></div>
+        <div class="head">
+          <div class="eye eye-left"></div>
+          <div class="eye eye-right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="body">
+          <div class="panel"></div>
+          <div class="panel panel-small"></div>
+        </div>
+        <div class="arm arm-left"></div>
+        <div class="arm arm-right"></div>
+        <div class="legs">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-box">
+      <p class="question">Does your code run without error?</p>
+      <div class="button-row">
+        <button class="btn yes" type="button">Yes</button>
+        <button class="btn no" type="button">No</button>
+      </div>
+    </div>
+
+    <div class="response-box" id="responseBox" aria-live="polite">
+      I am evaluating your confidence level.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
